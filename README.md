@@ -23,3 +23,13 @@ Software für morphologische Analyse (Japanisch)
 
 * [NEologd](https://github.com/neologd/mecab-ipadic-neologd)
 Neologism dictionary for MeCab. Für die sozialwissenschaftliche Forschung sollten Neologismen (z.B. für Internet Slang) interessant sein.
+
+* [Voyant](https://voyant-tools.org/)
+Voyant Tools ist eine webbasierte Lese- und Analyseumgebung für digitale Texte.
+
+## Python libraries
+* [Natural Language Toolkit](https://tedboy.github.io/nlps/nltk_intro.html)
+NLTK is a leading platform for building Python programs to work with human language data. 
+
+* [gensim](https://radimrehurek.com/gensim/index.html)
+The fastest library for training of vector embeddings (Worteinbettung) – Python or otherwise.

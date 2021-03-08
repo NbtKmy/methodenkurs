@@ -12,7 +12,7 @@ def createModel(corp):
         window=10,
         hs=1) # # use skip-gram & hierarchical softmax
     
-    model.wv.save_word2vec_format('tweetsOlympic.vec.pt', binary=True)
+    model.save('tweetsOlympic.model')
 
 if __name__ == "__main__":
     createModel('tweetsCorpus.txt')
