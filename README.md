@@ -2,8 +2,12 @@
 In diesem Repo werden verschiedene Beispiele mit NLP (Natural Language Processing) bzw. Computerlinguistik oder GIS (Geographic Information System) für den Methodenkurs (Japanologie: sozialwissenschaftliche Bereiche) gesammelt.
 
 
+
+
 ## Präsentation
 Für die Präsentation verwende ich [revealjs](https://revealjs.com/). Daher enthält das Repo auch die Codes von revealjs, für deren Nutzung gesondert Urheberrecht und Lizenz bestehen. 
+
+Link zur Präsentation: (https://nbtkmy.github.io/methodenkurs/presentation/index.html)
 
 ## Tools (Auswahl)
 * [KH Coder](https://khcoder.net/)
