@@ -16,8 +16,114 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>Textmining und Datenverarbeitung in Sozialwissenschaften</h2>
+				</section>
+				<section>
+					<section data-markdown>
+						## Ziel
+
+						* Methodik und Möglichkeiten überhaupt kennenlernen
+						* Umgang mit den Daten vertraut machen
+						* Neue Erkenntnisse durch diese Methodik erlangen
+						* Kritischer Blick auf solche Forschung erlernen
+					</section>
+					<section data-markdown>
+						## Was wir jetzt lernen, heisst auf Japanisch...:
+
+						* 地理情報システム = GIS (Geoinformationssystems)
+						* 計量テキスト分析 = Textmining oder Statistical Analysis of Text
+						* テキストマイニング = Textmining
+						* 分散表現 = Worteinbettung 
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Beispiel 1</h2>
+						<h2>GIS (Geoinformationssystems)</h2>						
+					</section>
+					<section>
+						<h1>What you get?</h1>
+					</section>
+					<section>
+						<h3>Bevölkerungsdichte mit Karteninformation</h3>
+						<img src="./img/shiga_populationmap.png" style="height: 500px; margin: 0 auto 4rem auto; background: transparent;" class="demo1">
+					</section>
+					<section data-markdown>
+						## Was man dafür braucht?
+
+						* [QGIS (Software)](https://www.qgis.org/en/site/)
+						* Statistische und Geographische Daten ([e-Stat](https://www.e-stat.go.jp/gis))
+						* ...'n bissl Handarbeit an CSV-Daten
+					</section>
+					<section data-markdown>
+						## Was bringt diese Visualisierung?
+
+						* Intuitive Erfassung, welche Bezirke in der Shiga Präf. dicht besiedelt sind
+						* Dies kann neue Frage aufwerfen
+						* ... also diese Methode führt vielleicht zu einer neuen Erkenntnis!
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Beispiel 2</h2>
+						<h2>Textmining</h2>						
+					</section>
+					<section>
+						<h2>What you get?</h2>
+					</section>
+					<section>
+						<h3>Visualisierung der Substantive in allen Pressekonferenzen vom (damaligen) Prämierminister Kan Naoto</h3>
+					</section>
+					<section>
+						<img src="./img/kan_pk_top100_Neologd.png" style="height: 700px; margin: 0 auto 4rem auto; background: transparent;" class="demo2_1">
+					</section>
+					<section>
+						<img src="./img/kan_pk_top100_withoutWatasi.png" style="height: 700px; margin: 0 auto 4rem auto; background: transparent;" class="demo2_2">
+					</section>
+					<section data-markdown>
+						## Was man dafür braucht?
+
+						* Textdaten von [WARP-Seite](https://warp.ndl.go.jp/info:ndljp/pid/2629568/www.kantei.go.jp/jp/kan/statement/index.html)! (Das ist das Mühsamste!)
+						* Python Libraries wie pandas, numpy, matplotlib usw.
+						* Software für morphologische Analyse ([MeCab](https://www.mlab.im.dendai.ac.jp/~yamada/ir/MorphologicalAnalyzer/MeCab.html)) und Wörterbuch (z.B. [NEologd](https://github.com/neologd/mecab-ipadic-neologd))
+						* ...und ein wenig Programmierkenntnisse (nicht viel)
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Beispiel 3</h2>
+						<h2>Worteinbettung</h2>						
+					</section>
+					<section>
+						<h2>What you get?</h2>
+					</section>
+					<section>
+						<h3>Tweets über "Olympiade" auf Japanisch und Analyse mit Worteinbettung</h3>
+					</section>
+					<section>
+						<h3>Bedeutungsnahe Begriffe im Textcorpus. "オリンピック & 日本"</h3>
+						<img src="./img/w2v_olympicUndJapan.png" style="height: 500px; margin: 0 auto 4rem auto; background: transparent;" class="demo3_1">
+					</section>
+					<section>
+						<h3>Bedeutungsnahe Begriffe im Textcorpus. "日本"</h3>
+						<img src="./img/w2v_nihon.png" style="height: 500px; margin: 0 auto 4rem auto; background: transparent;" class="demo3_2">
+					</section>
+					<section>
+						<h3>Bedeutungsnahe Begriffe im Textcorpus. "オリンピック" in 2D-Mapping</h3>
+					</section>
+					<section>
+						<img src="./img/w2v_plot.png" style="height: 700px; margin: 0 auto 4rem auto; background: transparent;" class="demo3_３">
+					</section>
+					<section data-markdown>
+						## Was man dafür braucht?
+
+						* Textdaten von [Twitter (API-Key)](https://developer.twitter.com/en/docs)
+						* Python Libraries wie [tweepy](https://www.tweepy.org/), [gensim](https://radimrehurek.com/gensim/) usw.
+						* Software für morphologische Analyse ([MeCab](https://www.mlab.im.dendai.ac.jp/~yamada/ir/MorphologicalAnalyzer/MeCab.html)) und Wörterbuch (z.B. [NEologd](https://github.com/neologd/mecab-ipadic-neologd))
+						* ...und ein wenig Programmierkenntnisse (nicht viel)
+					</section>
+				</section>
 			</div>
 		</div>
 
