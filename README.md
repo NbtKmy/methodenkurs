@@ -37,3 +37,12 @@ NLTK is a leading platform for building Python programs to work with human langu
 
 * [gensim](https://radimrehurek.com/gensim/index.html)
 The fastest library for training of vector embeddings (Worteinbettung) – Python or otherwise.
+
+## Zu Textdaten
+Die Textdaten in diesem Repo habe ich aus den folgenden Quellen gesammelt:
+
+* [WARP (Web Archiving Project)](https://warp.ndl.go.jp/info:ndljp/pid/11001539/www.kantei.go.jp/jp/kan/statement/)
+* Twitter - über Twitter API. Die User-ID oder andere private Information sind gelöscht
+* [Reuters-21578, Distribution 1.0](https://archive.ics.uci.edu/ml/datasets/Reuters-21578+Text+Categorization+Collection)
+
+Diese dürfen ausschliesslich zum Forschungszweck wiederverwendet werden. 
