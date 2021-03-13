@@ -13,67 +13,66 @@
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 	</head>
-	<body>
+	<body onload="getLib()">
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h2>Textmining und Datenverarbeitung in Sozialwissenschaften</h2>
+					<h2>Using statistical data and Text mining in Social Sciences</h2>
 				</section>
 				<section>
 					<section data-markdown>
-						## Ziel
+						## Goal
 
-						* Methodik und Möglichkeiten überhaupt kennenlernen
-						* Umgang mit den Daten vertraut machen
-						* Neue Erkenntnisse durch diese Methodik erlangen
-						* Kritischer Blick auf solche Forschung erlernen
+						* Learning possibilities with data
+						* ...and some methods 
+						* Getting critical insight about managing data
 					</section>
 					<section data-markdown>
-						## Was wir jetzt lernen, heisst auf Japanisch...:
+						## Key terms in Japanese:
 
 						* 地理情報システム = GIS (Geoinformationssystems)
-						* 計量テキスト分析 = Textmining oder Statistical Analysis of Text
-						* テキストマイニング = Textmining
-						* 分散表現 = Worteinbettung 
+						* 計量テキスト分析 = text mining or statistical analysis of text
+						* テキストマイニング = text mining
+						* 共起表現 = co-occurrence or collocation
+						* 分散表現 = word embedding
 					</section>
 				</section>
 				<section>
 					<section>
-						<h2>Beispiel 1</h2>
+						<h2>Example 1</h2>
 						<h2>GIS (Geoinformationssystems)</h2>						
 					</section>
 					<section>
 						<h1>What you get?</h1>
 					</section>
 					<section>
-						<h3>Bevölkerungsdichte mit Karteninformation</h3>
+						<h3>Density of population on the map</h3>
 						<img src="./img/shiga_populationmap.png" style="height: 500px; margin: 0 auto 4rem auto; background: transparent;" class="demo1">
 					</section>
 					<section data-markdown>
-						## Was man dafür braucht?
+						## Technical requirements
 
 						* [QGIS (Software)](https://www.qgis.org/en/site/)
-						* Statistische und Geographische Daten ([e-Stat](https://www.e-stat.go.jp/gis))
-						* ...'n bissl Handarbeit an CSV-Daten
+						* Statistical and geographical data ([e-Stat](https://www.e-stat.go.jp/gis))
 					</section>
 					<section data-markdown>
-						## Was bringt diese Visualisierung?
+						## Advantages of the visualization?
 
-						* Intuitive Erfassung, welche Bezirke in der Shiga Präf. dicht besiedelt sind
-						* Dies kann neue Frage aufwerfen
-						* ... also diese Methode führt vielleicht zu einer neuen Erkenntnis!
+						* Getting densities intuitively
+						* Rising more questions from the visual expression
+						* ... and they might bring you to new findings
 					</section>
 				</section>
 				<section>
 					<section>
-						<h2>Beispiel 2</h2>
-						<h2>Textmining</h2>						
+						<h2>Example 2</h2>
+						<h2>Text mining (co-occurrence or collocation)</h2>
 					</section>
 					<section>
 						<h2>What you get?</h2>
 					</section>
 					<section>
-						<h3>Visualisierung der Substantive in allen Pressekonferenzen vom (damaligen) Prämierminister Kan Naoto</h3>
+						<h3>Visualizing the co-occurence of the vocaburary in all press conferences of the former Prime minister Kan Naoto</h3>
 					</section>
 					<section>
 						<img src="./img/kan_pk_top100_Neologd.png" style="height: 700px; margin: 0 auto 4rem auto; background: transparent;" class="demo2_1">
@@ -82,46 +81,102 @@
 						<img src="./img/kan_pk_top100_withoutWatasi.png" style="height: 700px; margin: 0 auto 4rem auto; background: transparent;" class="demo2_2">
 					</section>
 					<section data-markdown>
-						## Was man dafür braucht?
+						## Technical requirements
 
-						* Textdaten von [WARP-Seite](https://warp.ndl.go.jp/info:ndljp/pid/2629568/www.kantei.go.jp/jp/kan/statement/index.html)! (Das ist das Mühsamste!)
-						* Python Libraries wie pandas, numpy, matplotlib usw.
-						* Software für morphologische Analyse ([MeCab](https://www.mlab.im.dendai.ac.jp/~yamada/ir/MorphologicalAnalyzer/MeCab.html)) und Wörterbuch (z.B. [NEologd](https://github.com/neologd/mecab-ipadic-neologd))
-						* ...und ein wenig Programmierkenntnisse (nicht viel)
+						* Text corpus from [WARP-Seite](https://warp.ndl.go.jp/info:ndljp/pid/2629568/www.kantei.go.jp/jp/kan/statement/index.html)! 
+						* Python libraries wie pandas, numpy, matplotlib usw.
+						* Software for the morphological analysis ([MeCab](https://www.mlab.im.dendai.ac.jp/~yamada/ir/MorphologicalAnalyzer/MeCab.html)) and dictionary (ex. [NEologd](https://github.com/neologd/mecab-ipadic-neologd))
+					</section>
+					<section data-markdown>
+						## Advantages of the visualization?
+
+						* Getting co-occurrences and word frequency intuitively
+						* Visualization can support your interpretation
+						* ... and they might bring you to new findings
 					</section>
 				</section>
 				<section>
 					<section>
-						<h2>Beispiel 3</h2>
-						<h2>Worteinbettung</h2>						
+						<h2>Example 3</h2>
+						<h2>Word embedding</h2>						
 					</section>
 					<section>
 						<h2>What you get?</h2>
 					</section>
 					<section>
-						<h3>Tweets über "Olympiade" auf Japanisch und Analyse mit Worteinbettung</h3>
+						<h3>Collecting tweets with the word "オリンピック (Olympic)" and analysis with word embedding</h3>
 					</section>
 					<section>
-						<h3>Bedeutungsnahe Begriffe im Textcorpus. "オリンピック & 日本"</h3>
+						<h3>Similar words to "オリンピック & 日本"</h3>
 						<img src="./img/w2v_olympicUndJapan.png" style="height: 500px; margin: 0 auto 4rem auto; background: transparent;" class="demo3_1">
 					</section>
 					<section>
-						<h3>Bedeutungsnahe Begriffe im Textcorpus. "日本"</h3>
+						<h3>Similar words to "日本"</h3>
 						<img src="./img/w2v_nihon.png" style="height: 500px; margin: 0 auto 4rem auto; background: transparent;" class="demo3_2">
 					</section>
 					<section>
-						<h3>Bedeutungsnahe Begriffe im Textcorpus. "オリンピック" in 2D-Mapping</h3>
+						<h3>Similar words to "オリンピック" in 2D-Mapping</h3>
 					</section>
 					<section>
 						<img src="./img/w2v_plot.png" style="height: 700px; margin: 0 auto 4rem auto; background: transparent;" class="demo3_３">
 					</section>
 					<section data-markdown>
-						## Was man dafür braucht?
+						## Technical requirements
 
-						* Textdaten von [Twitter (API-Key)](https://developer.twitter.com/en/docs)
-						* Python Libraries wie [tweepy](https://www.tweepy.org/), [gensim](https://radimrehurek.com/gensim/) usw.
-						* Software für morphologische Analyse ([MeCab](https://www.mlab.im.dendai.ac.jp/~yamada/ir/MorphologicalAnalyzer/MeCab.html)) und Wörterbuch (z.B. [NEologd](https://github.com/neologd/mecab-ipadic-neologd))
-						* ...und ein wenig Programmierkenntnisse (nicht viel)
+						* Text corpus from [Twitter (API-Key)](https://developer.twitter.com/en/docs)
+						* Python libraries like [tweepy](https://www.tweepy.org/), [gensim](https://radimrehurek.com/gensim/) usw.
+						* Software for the morphological Analysis ([MeCab](https://www.mlab.im.dendai.ac.jp/~yamada/ir/MorphologicalAnalyzer/MeCab.html)) and dictionary (ex. [NEologd](https://github.com/neologd/mecab-ipadic-neologd))
+					</section>
+					<section data-markdown>
+						## Advantages of the word embedding?
+
+						* Getting words (or meanings) as vector 
+						* Word vector space model can be used syntactic analysis and sentiment analysis
+						* ... and they might bring you to new findings
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Playing with data</h1>
+					</section>
+					<section data-markdown>
+						# Step 1
+						## Choose a text corpus from here
+						* Text from press conferences of the former prime minister Kan Naoto (Japanese)
+						* Text corpus from Twitter (Japanese, anonymized)
+						* Text corpus from [Reuters-21578](https://archive.ics.uci.edu/ml/datasets/Reuters-21578+Text+Categorization+Collection) (English)
+					</section>
+					<section data-markdown>
+						# Step 2
+						## Then put it in [Voyant Tool](https://voyant-tools.org/)
+						* What happens at first?
+						* Create your own stop words list
+						* And see what happens (for example word cloud)
+						* Compare your result with your colleagues
+					</section>
+					<section data-markdown>
+						# Step 3
+						## Discussion
+						* How many influence you have on the result?
+						* Is the result then objective?
+						* What is important, if you want to use the data for your research?
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Literature</h1>
+					</section>
+					<section>
+						<h3>Researches with text mining on Japanese topics</h3>
+						<div id="output"></div>
+					</section>
+					<section>
+						<h3>Further readings 1</h3>
+						<div id="output2"></div>
+					</section>
+					<section>
+						<h3>Further readings 2</h3>
+						<div id="output3"></div>
 					</section>
 				</section>
 			</div>
@@ -131,6 +186,7 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="./getLib.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
