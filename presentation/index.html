@@ -34,7 +34,7 @@
 						* 計量テキスト分析 = text mining or statistical analysis of text
 						* テキストマイニング = text mining
 						* 共起表現 = co-occurrence or collocation
-						* 分散表現 = word embedding
+						* 単語の埋め込み = word embedding
 					</section>
 				</section>
 				<section>
@@ -69,10 +69,13 @@
 						<h2>Text mining (co-occurrence or collocation)</h2>
 					</section>
 					<section>
+						<h3>Co-occurrence = an above-chance frequency of occurrence of two terms from a text corpus alongside each other in a certain order</h3>
+					</section>
+					<section>
 						<h2>What you get?</h2>
 					</section>
 					<section>
-						<h3>Visualizing the co-occurence of the vocaburary in all press conferences of the former Prime minister Kan Naoto</h3>
+						<h3>Visualizing the co-occurrence of the vocabulary in all press conferences of the former Prime minister Kan Naoto</h3>
 					</section>
 					<section>
 						<img src="./img/kan_pk_top100_Neologd.png" style="height: 700px; margin: 0 auto 4rem auto; background: transparent;" class="demo2_1">
@@ -94,11 +97,26 @@
 						* Visualization can support your interpretation
 						* ... and they might bring you to new findings
 					</section>
+					<section data-markdown>
+						## Caution - Rules for web crawling
+
+						* Many websites have Robots Exclusion Standard (RES) 
+						* A "robots.txt"-protocol under http[s]://[domain name]/robots.txt
+						* The protocol expresses the rules for/against the web crawling.
+						* Example: https://ja.wikipedia.org/robots.txt
+					</section>
 				</section>
 				<section>
 					<section>
 						<h2>Example 3</h2>
 						<h2>Word embedding</h2>						
+					</section>
+					<section>
+						<h3>Word embedding = representation of words in the form of a real-valued vector that encodes the meaning of the word such that the words that are closer in the vector space are expected to be similar in meaning</h3>
+					</section>
+					<section>
+						<img src="https://www.tensorflow.org/images/linear-relationships.png" style="height: 350px; margin: 0 auto 4rem auto; background: transparent;" class="demo3_0">
+						<p>image from: https://www.tensorflow.org/images/linear-relationships.png</p>
 					</section>
 					<section>
 						<h2>What you get?</h2>
@@ -133,6 +151,13 @@
 						* Getting words (or meanings) as vector 
 						* Word vector space model can be used syntactic analysis and sentiment analysis
 						* ... and they might bring you to new findings
+					</section>
+					<section data-markdown>
+						## Caution - legal & ethical aspect for the data analysis & the publishing the results
+
+						* According to the Japanese Copyright Act, Art. 47-7, the copying the data for the purpose of the data analysis is permitted
+						* If you will/should publish the data, the personal information must be at least anonymized for the privacy protection
+						* In this example I've removed all Twitter-IDs
 					</section>
 				</section>
 				<section>
